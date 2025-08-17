@@ -109,6 +109,7 @@ a:hover {
     transform: scaleY(-1);
     opacity: 0.2;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -226,4 +227,53 @@ a:hover {
     to {
         transform: translateX(50%) scale(1) rotate(360deg);
     }
+}
+
+.ocean {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top, #00111a, #000);
+    overflow: hidden;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100px;
+    background: url('assets/img/wave-pattern.svg') repeat-x;
+    animation: waveMove 10s linear infinite;
+}
+
+@keyframes waveMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.lyrics {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-style: italic;
+    color: #aeeaff;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    text-align: center;
+    transition: all 2s ease;
+    text-shadow: 0 0 15px rgba(174, 234, 255, 0.8);
+    max-width: 90%;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.ocean.active .lyrics {
+    bottom: 80px;
+    opacity: 1;
 }

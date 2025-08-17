@@ -1,11 +1,11 @@
-const startDate = new Date("2025-08-03");
+const startDate = new Date("2025-09-01");
 const weeks = [
     {
         title: 'Semana 1 – O Convite ao Labirinto',
         html: `
             <p class="fade-in">“Não sei onde este caminho nos leva. Mas sei que, passo a passo, ele termina no mesmo lugar: no abraço que espero desde sempre.”</p>
             <blockquote class="fade-in delay-1">“Não sei para onde vou, mas sei que não vou por aí.” — José Régio</blockquote>
-            <img id="corvo" src="assets/img/corvo.png" alt="Corvo" class="pulse fade-in delay-2" onClick="corvoAlert()">
+            <img id="corvo" src="assets/img/corvo.png" alt="Corvo" class="pulse fade-in delay-2" onClick="week1()">
             <p class="fade-in delay-2">Clique no corvo para receber sua primeira mensagem.</p>
         `
     },
@@ -58,6 +58,26 @@ const weeks = [
                 </div>
 
         `
-    }
-    // TODO: Add week 4 - 10
+    },
+    {
+        title: 'Semana 4 - O Mar Noturno',
+        html: `
+                <div class="week">
+                    <p class="poem">
+                        “For my dreams I hold my life,<br>
+                        For wishes I behold my night…”
+                        <br>– Nightwish, <i>Sleeping Sun</i>
+                    </p>
+
+                    <button onclick="week4()">Navegar</button>
+
+                    <div class="ocean">
+                        <div class="waves"></div>
+                        <div class="lyrics"></div>
+                    </div>
+                </div>
+
+        `
+    },
+    // TODO: Add week 5 - 10
 ];

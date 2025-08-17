@@ -1,4 +1,4 @@
-function corvoAlert() {
+function week1() {
     alert('Seja bem-vinda ao labirinto que criei para nós. Um passo por semana… até o fim.');
 }
 
@@ -33,4 +33,17 @@ function week3() {
     const poem = document.querySelector('.poem');
     poem.style.transition = 'color 1.5s ease';
     poem.style.color = '#ddd';
+}
+
+function week4() {
+    const ocean = document.querySelector('.ocean');
+    ocean.classList.add('active');
+
+    document.querySelector('.lyrics').innerHTML = `
+    "I knew you never before,<br>
+    I see you never more,<br>
+    But the love the pain the hope O beaufitul one,<br>
+    Have made you mine 'till all my years are done"<br>
+    - Nightwish, <i>Gethsemane</i>
+    `;
 }
