@@ -88,3 +88,142 @@ a:hover {
 .pulse {
     animation: pulse 2s infinite;
 }
+
+.week {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.poem {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.poem::after {
+    content: attr(data-text);
+    content: "“O espelho reflete com exatidão, mas só mostra a superfície. Em ti, encontro mais que reflexo: encontro o abismo doce onde quero mergulhar.”";
+    display: block;
+    transform: scaleY(-1);
+    opacity: 0.2;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.tarot-container {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    /* começa invisível */
+    transition: opacity 1.2s ease;
+}
+
+.tarot-card {
+    width: 150px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all 1.2s ease;
+}
+
+.tarot-card.left {
+    transform: translateX(-80px) translateY(40px);
+}
+
+.tarot-card.right {
+    transform: translateX(80px) translateY(40px);
+}
+
+.night-sky {
+    position: relative;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 1.5s ease;
+}
+
+.night-sky.active {
+    height: 300px;
+    background: linear-gradient(to bottom, #0b0c10, #1f2833);
+    opacity: 1;
+}
+
+.moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff, #ddd, #aaa);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.7);
+}
+
+.stars {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tarot-card-week3 {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%) scale(0.1);
+    opacity: 0;
+    transition: all 1.5s ease;
+    max-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.night-sky.active .tarot-card-week3 {
+    transform: translateX(50%) scale(1);
+    opacity: 1;
+    animation: pulseGlow 4s infinite ease-in-out, slowSpin 60s infinite linear;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(173, 216, 230, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes slowSpin {
+    from {
+        transform: translateX(50%) scale(1) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(50%) scale(1) rotate(360deg);
+    }
+}
