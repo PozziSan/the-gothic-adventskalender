@@ -54,3 +54,14 @@ function week5() {
         hidden.style.display = "block";
     }
 }
+
+function week6() {
+    const wheel = document.querySelector('#week6 .wheel');
+    const hiddenFields = document.querySelectorAll('.hidden');
+
+    wheel.style.animation = 'week6SpinFast 3s linear';
+
+    setTimeout(() => wheel.style.animation = 'week6SlowRotate 40s linear infinite', 3000);
+
+    hiddenFields.forEach((field) => field.classList.remove('hidden'));
+}

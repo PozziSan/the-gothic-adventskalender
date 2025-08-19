@@ -95,11 +95,43 @@ const weeks = [
                         When angels cry blood </br> 
                         On flowers of evil in bloom" — HIM</p>
 
-                        <p class="him-quote">Watch me fall for you, my Venus Doom.</p>
+                        <p class="him-quote">Watch me fall for you, my Venus Doom. - Pedro</p>
                     </div>
                 </div>
 
         `
+    },
+    {
+        title: 'Semana 6 - O Destino em Movimento',
+        html: `
+                
+                <div class="week6-text">
+                    <p class="pessoa-quote">
+                        "Navegar é preciso; viver não é preciso." <br />
+                        — Fernando Pessoa
+                    </p>
+                    <button class="reveal-btn" onclick="week6()">Fazer a Roda girar</button>
+                </div>
+                <div id="week6" class="week6-container hidden">
+                    <div class="wheel"></div>
+
+                    <div class="week6-text">
+                        <p id="rice-destiny" class="rice-destiny hidden">
+                            “Very few really seek knowledge in this world. Mortal or immortal, 
+                            few really ask. On the contrary, they try to wring from the unknown 
+                            the answers they have already shaped in their own minds.”
+                            — Anne Rice
+                        </p>
+                        <p id="my-quote" class="rice-destiny hidden">
+                            "Within the deepest veil of darkness, I surrendered myself in sacrifice.</br>
+                            There, in the aching silence, I lost myself as often as I was found.</br>
+                            I believed nothing to be true and nearly let hope slip away.</br>
+                            And yet, even there, Fortune never ceased her turning — and I could not have imagined the gift that destiny was about to place in my path..."
+                            — Pedro
+                        </p>
+                    </div>
+                </div>
+        `
     }
-    // TODO: Add week 6 - 10
+    // TODO: Add week 7 - 10
 ];
