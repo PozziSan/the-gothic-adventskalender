@@ -79,5 +79,27 @@ const weeks = [
 
         `
     },
-    // TODO: Add week 5 - 10
+    {
+        title: 'Semana 5 - Revelações da Penumbra',
+        html: `
+                <div class="ornament-wrapper">
+                <div class="ornament"></div>
+                </div>  
+                <div class="week">
+                    <p class="rice-quote">“You must know life to see decay. Yet it is in decay that life reveals itself most fully.” — Lestat</p>                    
+                    <button onclick="week5()">Revelar</button>
+                    
+                    <div id="week5-hidden" style="display:none; margin-top: 20px;">
+                        <p class="him-quote">"Love is the funeral of hearts</br>
+                        And an ode for cruelty</br>
+                        When angels cry blood </br> 
+                        On flowers of evil in bloom" — HIM</p>
+
+                        <p class="him-quote">Watch me fall for you, my Venus Doom.</p>
+                    </div>
+                </div>
+
+        `
+    }
+    // TODO: Add week 6 - 10
 ];

@@ -47,3 +47,10 @@ function week4() {
     - Nightwish, <i>Gethsemane</i>
     `;
 }
+
+function week5() {
+    const hidden = document.getElementById("week5-hidden");
+    if (hidden.style.display === "none") {
+        hidden.style.display = "block";
+    }
+}
