@@ -65,3 +65,41 @@ function week6() {
 
     hiddenFields.forEach((field) => field.classList.remove('hidden'));
 }
+
+function week7() {
+    const garden = document.getElementById('garden');
+    const contemplate = document.getElementById('contemplate');
+
+    if (contemplate.classList.contains('hidden')) contemplate.classList.remove('hidden');
+
+    if (!garden.classList.contains('active')) {
+        garden.classList.add('active');
+
+        for (let i = 1; i <= 66; i++) {
+            const rose = document.createElement('div');
+            const leftPct = 6 + Math.random() * 88; //random horizontal position - 6 - 94%
+            const baseTop = 20 + Math.random() * 60; // 20 - 80% random vertical position
+            const rot = `${(Math.random() * 8 - 4).toFixed(2)}deg`; // rotaaaating
+
+            rose.className = 'rose';
+            rose.style.left = `${leftPct}%`;
+            rose.style.top = `${baseTop}%`;
+            rose.style.setProperty('--r', rot);
+
+            const delay = 120 + i * 140 + Math.random() * 120;
+            setTimeout(() => rose.classList.add('visible'), delay);
+            garden.appendChild(rose);
+        }
+
+        return;
+    }
+
+    garden.querySelectorAll('.rose').forEach((r) => {
+        r.style.transition = 'transform .35s ease, filter .4s ease';
+        r.style.transform = `translateY(-6px) scale(1.03) rotate(${getComputedStyle(r).getPropertyValue('--r')})`;
+
+        setTimeout(() => {
+            r.style.transform = `translateY(0) scale(1) rotate(${getComputedStyle(r).getPropertyValue('--r')})`;
+        }, 230);
+    })
+}

@@ -1,4 +1,4 @@
-const startDate = new Date("2025-09-01");
+const startDate = new Date("2025-07-08");
 const weeks = [
     {
         title: 'Semana 1 – O Convite ao Labirinto',
@@ -132,6 +132,35 @@ const weeks = [
                     </div>
                 </div>
         `
+    },
+    {
+        title: 'Semana 7 - O Jardim das Sombras',
+        html: `
+                <div id="week7" class="week7-container">
+                    <div class="garden-bg">
+                        <span class="firefly"></span>
+                        <span class="firefly"></span>
+                        <span class="firefly"></span>
+                    </div>
+
+                    <div class="week7-content">
+                        <p class="week7-text">
+                        Há jardins que só se abrem à noite.  
+                        Que a tua mão seja a chave.
+                        </p>
+
+                        <button class="reveal-btn" onclick="week7()">Fazer o jardim florescer</button>
+
+                        <p id="contemplate" class="week7-text hidden">
+                        Há em minhas horas mais noturnas, quando as estrelas se negam a brilhar e a lua, covarde, abandona o céu,
+                        um desejo incontido de deter-me, imóvel, apenas para contemplá-la.
+                        </p>
+                        
+                        <div id="garden" class="garden" aria-live="polite"></div>
+                    </div>
+                </div>
+
+        `
     }
-    // TODO: Add week 7 - 10
+    // TODO: Add week 8 - 10
 ];

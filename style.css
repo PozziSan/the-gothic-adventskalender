@@ -297,7 +297,7 @@ a:hover {
     font-size: 1.5rem;
     max-width: 800px;
     opacity: 0;
-    animation: week5FadeIn 4s ease forwards;
+    animation: fadeIn 4s ease forwards;
 }
 
 .him-quote {
@@ -305,7 +305,7 @@ a:hover {
     margin-top: 2rem;
     color: #d1b3ff;
     opacity: 0;
-    animation: week5FadeIn 4s ease 3s forwards;
+    animation: fadeIn 4s ease 3s forwards;
 }
 
 .ornament-wrapper {
@@ -326,12 +326,6 @@ a:hover {
     animation: pulse 6s ease-in-out infinite;
 }
 
-
-@keyframes week5FadeIn {
-    to {
-        opacity: 1;
-    }
-}
 
 @keyframes pulse {
 
@@ -385,7 +379,7 @@ a:hover {
 .pessoa-quote {
     font-size: 1.6rem;
     margin-bottom: 2rem;
-    animation: week6FadeIn 4s ease forwards;
+    animation: fadeIn 4s ease forwards;
 }
 
 .reveal-btn {
@@ -408,7 +402,7 @@ a:hover {
     font-size: 1.2rem;
     margin-top: 2rem;
     color: #d1b3ff;
-    animation: week6FadeIn 3s ease forwards;
+    animation: fadeIn 3s ease forwards;
 }
 
 .hidden {
@@ -435,8 +429,159 @@ a:hover {
     }
 }
 
-@keyframes week6fadeIn {
-    to {
+.week7-container {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(1200px 600px at 50% 40%, #160016 0%, #0a0a0a 60%, #000 100%);
+    color: #eaddff;
+    font-family: 'Cinzel', serif;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.week7-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+}
+
+.week7-content h2 {
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.week7-text {
+    opacity: 0;
+    animation: fadeIn 2.2s ease forwards;
+    font-size: clamp(1rem, 2.8vw, 1.25rem);
+    color: #e6d9ff;
+}
+
+.reveal-btn {
+    margin-top: 1.25rem;
+    background: #220022;
+    color: #e6d9ff;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #5a266a;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .15s ease, background .3s ease, box-shadow .3s ease;
+    box-shadow: 0 0 0 rgba(90, 38, 106, 0);
+    font-family: 'Cinzel', serif;
+}
+
+.reveal-btn:hover {
+    background: #360036;
+    box-shadow: 0 8px 30px rgba(90, 38, 106, .25);
+    transform: translateY(-1px);
+}
+
+.garden-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: .25;
+    background:
+        radial-gradient(800px 400px at 50% 60%, rgba(128, 0, 128, .08) 0%, transparent 70%),
+        radial-gradient(600px 300px at 30% 30%, rgba(90, 38, 106, .08) 0%, transparent 70%),
+        radial-gradient(600px 300px at 70% 30%, rgba(90, 38, 106, .08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.firefly {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    background: rgba(235, 222, 255, .8);
+    box-shadow: 0 0 12px rgba(235, 222, 255, .8);
+    animation: drift 12s linear infinite, week7Twinkle 2.4s ease-in-out infinite;
+    mix-blend-mode: screen;
+}
+
+.firefly:nth-child(1) {
+    top: 20%;
+    left: 25%;
+    animation-delay: .2s, .1s;
+}
+
+.firefly:nth-child(2) {
+    top: 65%;
+    left: 70%;
+    animation-delay: 1.4s, .6s;
+}
+
+.firefly:nth-child(3) {
+    top: 35%;
+    left: 80%;
+    animation-delay: .9s, 1.2s;
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-60px, 30px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes week7Twinkle {
+
+    0%,
+    100% {
+        opacity: .3;
+    }
+
+    50% {
         opacity: 1;
+    }
+}
+
+
+.garden {
+    margin-top: 2rem;
+    position: relative;
+    min-height: 220px;
+    width: min(900px, 92vw);
+    margin-inline: auto;
+    border-top: 1px solid rgba(234, 221, 255, .08);
+}
+
+.rose {
+    position: absolute;
+    width: clamp(70px, 12vw, 120px);
+    aspect-ratio: 2/3;
+    background: url('assets/img/rose_black.svg') no-repeat center/contain;
+    filter: grayscale(100%) brightness(.8);
+    opacity: 0;
+    transform: translateY(18px) scale(.94) rotate(var(--r, 0deg));
+    transition: opacity .9s ease, transform .9s ease, filter .4s ease;
+    will-change: transform, opacity, filter;
+}
+
+.rose.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(var(--r, 0deg));
+}
+
+.rose:hover {
+    filter: grayscale(0%) brightness(1);
+    transform: translateY(-4px) scale(1.04) rotate(var(--r, 0deg));
+}
+
+@media (max-width: 420px) {
+    .garden {
+        min-height: 180px;
     }
 }
