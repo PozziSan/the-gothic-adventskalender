@@ -1,4 +1,4 @@
-const startDate = new Date("2025-07-08");
+const startDate = new Date("2025-09-01");
 const weeks = [
     {
         title: 'Semana 1 – O Convite ao Labirinto',
@@ -161,6 +161,33 @@ const weeks = [
                 </div>
 
         `
+    },
+    {
+        title: 'Semana 8 - Fogo e Comprometimento',
+        html: `
+                <div id="week8" class="week8-container">
+                    <div class="week8-content">
+                        <p class="week8-intro">
+                        O fogo demanda. É preciso coragem para aqueles que ousam trilhar seus caminhos.</br>
+                        É necessário comprometimento para que a manutenção da chama não torne-se um culto as cinzas.</br>
+                        As vezes, é preciso morrer.
+                        </p>
+                        <div class="lust hidden"></div>
+
+                        <button class="seal-btn" id="sealBtn" onclick="week8()">Would you join me in death?</button>
+
+                        <div class="hidden" aria-live="polite">
+                        <p class="rice-destiny">
+                            Morte converte-se em renascimento. As chamas trazem a Fênix a nova vida. Que essa seja a Iniciação. </br>
+                            Que a intensidade, a coragem, o prazer, e a Vontade guiem-nos a eterna manutenção da chama.</br>
+                            Que não seja apenas pura rotina, mas sim um culto a vida, e a tesão de viver.</br></br>
+                            
+                            Ser eternamente sincero e ter a coragem de ser demasiadamente humano. Eis o que me comprometo, porque tal é minha Vontade.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+        `
     }
-    // TODO: Add week 8 - 10
+    // TODO: Add week 9 - 10
 ];

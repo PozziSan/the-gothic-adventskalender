@@ -101,5 +101,16 @@ function week7() {
         setTimeout(() => {
             r.style.transform = `translateY(0) scale(1) rotate(${getComputedStyle(r).getPropertyValue('--r')})`;
         }, 230);
-    })
+    });
+}
+
+function week8() {
+    const lust = document.querySelector('#week8 .lust');
+    const hiddenFields = document.querySelectorAll('.hidden');
+
+    lust.style.animation = 'week6SpinFast 3s linear';
+
+    setTimeout(() => lust.style.animation = 'week6SlowRotate 40s linear infinite', 3000);
+
+    hiddenFields.forEach((field) => field.classList.remove('hidden'));
 }
