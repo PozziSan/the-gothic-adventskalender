@@ -70,7 +70,7 @@ a:hover {
     text-shadow: 0 0 8px rgba(255, 0, 100, 0.7);
 }
 
-/* Efeito corvo piscando */
+
 @keyframes pulse {
 
     0%,
@@ -242,7 +242,7 @@ a:hover {
     bottom: 0;
     width: 200%;
     height: 100px;
-    background: url('assets/img/wave-pattern.svg') repeat-x;
+    background: url('assets/svg/wave-pattern.svg') repeat-x;
     animation: waveMove 10s linear infinite;
 }
 
@@ -321,7 +321,7 @@ a:hover {
 .ornament {
     width: 280px;
     height: 280px;
-    background: url('assets/img/heartagram_purple.svg') no-repeat center/contain;
+    background: url('assets/svg/heartagram_purple.svg') no-repeat center/contain;
     opacity: 0.08;
     animation: pulse 6s ease-in-out infinite;
 }
@@ -562,7 +562,7 @@ a:hover {
     position: absolute;
     width: clamp(70px, 12vw, 120px);
     aspect-ratio: 2/3;
-    background: url('assets/img/rose_black.svg') no-repeat center/contain;
+    background: url('assets/svg/rose_black.svg') no-repeat center/contain;
     filter: grayscale(100%) brightness(.8);
     opacity: 0;
     transform: translateY(18px) scale(.94) rotate(var(--r, 0deg));
@@ -639,6 +639,85 @@ a:hover {
     z-index: 0;
     pointer-events: none;
 }
+
+.week9-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #0a0a0a, #1a0033);
+    color: #e6e1f9;
+    font-family: 'Cinzel', serif;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+}
+
+.week9-intro {
+    font-size: 1.6rem;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+.week9-btn {
+    margin-top: 2.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background: transparent;
+    border: 2px solid #b38aff;
+    color: #e6e1f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.week9-btn:hover {
+    background: #b38aff20;
+    transform: scale(1.05);
+}
+
+.week9-hidden {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.week9-hidden.show {
+    opacity: 1;
+}
+
+.week9-ornament {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    background: url('assets/svg/week9.svg') no-repeat center/contain;
+    opacity: 0.05;
+    animation: week9Pulse 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+@keyframes week9Pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.05;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.08);
+        opacity: 0.12;
+    }
+}
+
 
 @media (max-width: 420px) {
     .garden {

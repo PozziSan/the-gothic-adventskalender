@@ -1,4 +1,4 @@
-const startDate = new Date("2025-09-01");
+const startDate = new Date("2025-06-25");
 const weeks = [
     {
         title: 'Semana 1 – O Convite ao Labirinto',
@@ -188,6 +188,38 @@ const weeks = [
                     </div>
                 </div>
         `
+    },
+    {
+        title: 'Semana 9 - A Travessia da Sombra',
+        html: `
+                <div class="week9-container">
+                    <div class="week9-content">
+                        <p class="week9-intro">
+                            Toda chama projeta sombras. <br/>
+                            É preciso morrer nelas para renascer na luz. <br/>
+                            Este é o limiar da Travessia.
+                        </p>
+
+                        <button class="week9-btn" id="week9Btn" onclick="week9()">
+                            Join the sinful — Study the Silence.
+                        </button>
+
+                        <div class="week9-hidden hidden" aria-live="polite">
+                            <p class="week9-revelation">
+                                Atravessar a sombra é aceitar o silêncio do mundo, </br>
+                                é abandonar ilusões e identidades frágeis. </br>
+                                Aqui morremos para os reflexos e para a visão "transcedental" de Mundo </br></br>
+                                Here we give birth to the Century Child.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="week9-ornament"></div>
+                </div>
+        `
+    },
+    {
+        title: 'Semana 10 - O Aeon.',
+        html: ``
     }
-    // TODO: Add week 9 - 10
 ];

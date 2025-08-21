@@ -114,3 +114,8 @@ function week8() {
 
     hiddenFields.forEach((field) => field.classList.remove('hidden'));
 }
+
+function week9() {
+    const hidden = document.querySelector('.week9-hidden')
+    hidden.classList.replace('hidden', 'show');
+}
