@@ -1,4 +1,4 @@
-const startDate = new Date("2025-06-18");
+const startDate = new Date("2025-09-01");
 const weeks = [
     {
         title: 'Semana 1 – O Convite ao Labirinto',
@@ -21,7 +21,7 @@ const weeks = [
                     </p>
 
                     <p class="quote">
-                        <em>“O espelho é o mais inútil de todos os objetos: serve apenas para mostrar a face.”</em>  
+                        <em>“A beleza é a eternidade a olhar-se no espelho.”</em>  
                         – Fernando Pessoa
                     </p>
 
