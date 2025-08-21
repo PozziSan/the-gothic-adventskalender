@@ -1,4 +1,4 @@
-const startDate = new Date("2025-06-25");
+const startDate = new Date("2025-06-18");
 const weeks = [
     {
         title: 'Semana 1 – O Convite ao Labirinto',
@@ -6,7 +6,7 @@ const weeks = [
             <p class="fade-in">“Não sei onde este caminho nos leva. Mas sei que, passo a passo, ele termina no mesmo lugar: no abraço que espero desde sempre.”</p>
             <blockquote class="fade-in delay-1">“Não sei para onde vou, mas sei que não vou por aí.” — José Régio</blockquote>
             <img id="corvo" src="assets/img/corvo.png" alt="Corvo" class="pulse fade-in delay-2" onClick="week1()">
-            <p class="fade-in delay-2">Clique no corvo para receber sua primeira mensagem.</p>
+            <p class="fade-in delay-2">Clique na galinha para receber sua primeira mensagem.</p>
         `
     },
     {
@@ -220,6 +220,23 @@ const weeks = [
     },
     {
         title: 'Semana 10 - O Aeon.',
-        html: ``
+        html: `
+               <div class="week10">
+                    <div class="aeon-bg"></div>
+
+                    <button class="aeon-btn" onclick="week10()">
+                        Love is the Law, Love under Will
+                    </button>
+
+                    <div class="week10-revelation hidden">
+                        <p>
+                            Since forever I was entwined to find you. </br>
+                            For ages we both waited for this very moment. </br>
+                            And now it has finally come. </br></br>
+                            Come to me.
+                        </p>
+                    </div>
+                </div>
+        `
     }
 ];

@@ -718,6 +718,65 @@ a:hover {
     }
 }
 
+.week10 {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #eee;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+.aeon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/img/the-aeon.jpg') center/cover no-repeat;
+    opacity: 0.2;
+    filter: contrast(120%);
+    z-index: -1;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.aeon-bg.pulse {
+    transform: scale(1.05);
+    opacity: 0.4;
+}
+
+.aeon-btn {
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #eee;
+    color: #eee;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.aeon-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.week10-revelation {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.week10-revelation.show {
+    opacity: 1;
+}
+
+
 
 @media (max-width: 420px) {
     .garden {

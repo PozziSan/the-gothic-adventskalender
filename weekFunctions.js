@@ -119,3 +119,11 @@ function week9() {
     const hidden = document.querySelector('.week9-hidden')
     hidden.classList.replace('hidden', 'show');
 }
+
+function week10() {
+    const aeon = document.querySelector('.aeon-bg');
+    const revelation = document.querySelector('.week10-revelation');
+
+    aeon.classList.add('pulse');
+    setTimeout(() => revelation.classList.replace('hidden', 'show'), 1000);
+}
